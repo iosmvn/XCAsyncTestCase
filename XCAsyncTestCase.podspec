@@ -1,33 +1,30 @@
 Pod::Spec.new do |s|
+
   s.name         = "XCAsyncTestCase"
-  s.version      = "1.0.0"
-  s.summary      = "Asynchronous capable XCTestCase"
+  s.version      = "2.2.2"
+  s.summary      = "Asynchronous capable XCTestCase subclass"
 
   s.description  = <<-DESC
-                   Allows testing of asynchronous APIs using XCTest much like gh-unit.
+                   A longer description of XCAsyncTestCase in Markdown format.
+
+                   * Think: Why did you write this? What is the focus? What does it do?
+                   * CocoaPods will be using this to generate tags, and improve search results.
+                   * Try to keep it short, snappy and to the point.
+                   * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
   s.homepage     = "http://premosystems.github.io/XCAsyncTestCase/"
 
+  s.license      = "MIT (example)"
+  s.author             = { "iosmvn" => “sundl1988@163.com" }
 
-  s.license      = { :type => 'MIT', :text => <<-ENDOFEXT
-                  Copyright (c) 2011 Masashi Ono.
+  s.source       = { :git => "https://github.com/iosmvn/XCAsyncTestCase.git", :tag => "2.2.2" }
 
-                  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  s.source_files  = "Classes", "Classes/**/*.{h,m}"
+  s.exclude_files = "Classes/Exclude"
 
-                  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
 
-                  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-                  ENDOFEXT
-                   }
-  s.author       = { "PremoSystems" => "info@premosystems.com" }
-  
-  s.source       = { :git => "https://github.com/premosystems/XCAsyncTestCase.git", :tag => s.version.to_s }
-
-  s.source_files = 'AsyncXCTestingKit/AsyncXCTestingKit/XCTestCase+AsyncTesting.{h,m}'
-
-  s.framework    = 'XCTest'
-  
+  s.framework  = “XCTest”
   s.requires_arc = true
-  s.ios.deployment_target = "5.0"
 end
